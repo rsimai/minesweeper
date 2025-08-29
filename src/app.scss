@@ -1,0 +1,11 @@
+@use "@patternfly/patternfly/patternfly.scss";
+@use "page.scss";
+@use "minesweeper.scss";
+
+p {
+    font-weight: bold;
+}
+
+body {
+    font-family: sans-serif;
+}

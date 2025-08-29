@@ -1,0 +1,78 @@
+.pf-c-dropdown {
+    background-color: purple !important;
+    border: 5px solid orange !important;
+    z-index: 9999 !important;
+}
+
+.pf-c-menu-toggle {
+    background-color: red !important;
+    border: 2px solid blue !important;
+    color: yellow !important;
+}
+
+.minesweeper-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.minesweeper-info-item {
+    width: 80px; /* Adjust as needed */
+    text-align: center;
+}
+
+.minesweeper-board {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--pf-global--BorderColor--100);
+    width: fit-content;
+}
+
+.minesweeper-row {
+    display: flex;
+}
+
+.minesweeper-cell {
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: lightgray;
+    user-select: none; /* Prevent text selection */
+    font-size: 1.2em;
+
+    &:not(.revealed):hover {
+        background-color: gray;
+    }
+}
+
+.minesweeper-cell.revealed {
+    background-color: white;
+    cursor: default;
+    border: 1px inset darkgray;
+}
+
+.minesweeper-cell.revealed.mine {
+    background-color: var(--pf-global--danger-color--100);
+}
+
+.minesweeper-cell.flagged {
+    background-color: var(--pf-global--warning-color--100);
+}
+
+/* Colors for mine counts */
+.minesweeper-cell.revealed:not(.mine) {
+    &[data-mine-count="1"] { color: blue; }
+    &[data-mine-count="2"] { color: green; }
+    &[data-mine-count="3"] { color: red; }
+    &[data-mine-count="4"] { color: purple; }
+    &[data-mine-count="5"] { color: maroon; }
+    &[data-mine-count="6"] { color: turquoise; }
+    &[data-mine-count="7"] { color: black; }
+    &[data-mine-count="8"] { color: gray; }
+}
