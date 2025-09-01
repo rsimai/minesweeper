@@ -214,9 +214,9 @@ const Minesweeper: React.FC = () => {
                     <div className="minesweeper-info-item">Mines: {minesRemaining}</div>
                     <div className="minesweeper-info-item">Time: {timeElapsed}s</div>
                     <select onChange={(e) => onSizeSelect({ target: { innerText: e.target.value } } as any)}>
-                        <option value="Small (8x8, 10 mines)">Small (8x8, 10 mines)</option>
-                        <option value="Medium (10x10, 15 mines)">Medium (10x10, 15 mines)</option>
-                        <option value="Large (12x12, 20 mines)">Large (12x12, 20 mines)</option>
+                        <option value="Small (8x8)">Small (8x8)</option>
+                        <option value="Medium (10x10)">Medium (10x10)</option>
+                        <option value="Large (12x12)">Large (12x12)</option>
                     </select>
                     <select onChange={(e) => onMinesSelect({ target: { innerText: e.target.value } } as any)}>
                         <option value="Few (10 mines)">Few (10 mines)</option>
